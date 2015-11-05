@@ -7,8 +7,10 @@ import counter from './counter';
 import {reducer as form} from 'redux-form';
 import info from './info';
 import widgets from './widgets';
+import devices from './devices';
 
 export default combineReducers({
+  devices,
   router: routerStateReducer,
   auth,
   form,

@@ -2,9 +2,9 @@ import React from 'react';
 import {IndexRoute, Route} from 'react-router';
 import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
-    App,
+    Devices,
+    SonoSpeak,
     Chat,
-    Home,
     Widgets,
     About,
     Login,
@@ -35,9 +35,9 @@ export default (store) => {
    * Please keep routes in alphabetical order
    */
   return (
-    <Route path="/" component={App}>
-      { /* Home (main) route */ }
-      <IndexRoute component={Home}/>
+    <Route path="/" component={SonoSpeak}>
+      { /* Devices (main) route */ }
+      <IndexRoute component={Devices}/>
 
       { /* Routes requiring login */ }
       <Route onEnter={requireLogin}>

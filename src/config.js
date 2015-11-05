@@ -13,22 +13,22 @@ module.exports = Object.assign({
   port: process.env.PORT,
   apiPort: process.env.APIPORT,
   app: {
-    title: 'React Redux Example',
-    description: 'All the modern best practices in one example.',
+    title: 'SonoSpeak',
+    description: 'Sonos as intercom',
     meta: {
       charSet: 'utf-8',
       property: {
-        'og:site_name': 'React Redux Example',
-        'og:image': 'https://react-redux.herokuapp.com/logo.jpg',
+        'og:site_name': 'SonoSpeak',
+        'og:image': '',
         'og:locale': 'en_US',
-        'og:title': 'React Redux Example',
-        'og:description': 'All the modern best practices in one example.',
+        'og:title': 'SonoSpeak',
+        'og:description': 'Sonos as intercom',
         'twitter:card': 'summary',
-        'twitter:site': '@erikras',
-        'twitter:creator': '@erikras',
-        'twitter:title': 'React Redux Example',
-        'twitter:description': 'All the modern best practices in one example.',
-        'twitter:image': 'https://react-redux.herokuapp.com/logo.jpg',
+        'twitter:site': '@magnusheini',
+        'twitter:creator': '@magnusheino',
+        'twitter:title': 'SonoSpeak',
+        'twitter:description': 'Sonos as intercom',
+        'twitter:image': '',
         'twitter:image:width': '200',
         'twitter:image:height': '200'
       }

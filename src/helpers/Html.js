@@ -22,6 +22,7 @@ export default class Html extends Component {
   render() {
     const {assets, component, store} = this.props;
     const content = component ? ReactDOM.renderToString(component) : '';
+    const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
     return (
       <html lang="en-us">
@@ -29,6 +30,8 @@ export default class Html extends Component {
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
+
+          <script src={cdn + 'jquery/2.1.3/jquery.min.js'}></script>
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, key) =>

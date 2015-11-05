@@ -14,6 +14,8 @@ import {reduxReactRouter, ReduxRouter} from 'redux-router';
 import getRoutes from './routes';
 import makeRouteHooksSafe from './helpers/makeRouteHooksSafe';
 
+import { receivedDevices, receivedCoordinators } from './redux/modules/devices';
+
 const client = new ApiClient();
 
 const dest = document.getElementById('content');
@@ -21,6 +23,12 @@ const store = createStore(reduxReactRouter, makeRouteHooksSafe(getRoutes), creat
 
 function initSocket() {
   const socket = io('', {path: '/api/ws', transports: ['polling']});
+  socket.on('coordinators', (devices) => {
+    store.dispatch(receivedCoordinators(devices));
+  });
+  socket.on('devices', (devices) => {
+    store.dispatch(receivedDevices(devices));
+  });
   socket.on('news', (data) => {
     console.log(data);
     socket.emit('my other event', { my: 'data from client' });
